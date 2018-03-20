@@ -4,6 +4,8 @@ $(document).ready(function(){
 const quizContainer = document.getElementById('list');
 let timer;
 let  time = 120;
+let rightAnswer = 0;
+let numberQuestions = 10;
 
 function reset(){
     stopwatch.time = 120;
@@ -27,14 +29,6 @@ function count() {
          clock()
 
 
-// let aArray = [questions.questionOne.choiceA, questions.questionTwo.choiceA, questions.questionThree.choiceA, questions.questionFour.choiceA, questions.questionFive.choiceA, questions.questionSix.choiceA, questions.questionSeven.choiceA, questions.questionEight.choiceA, questions.questionNine.choiceA, questions.questionTen.choiceA]
-// let questionsArray = [questions.questionOne.question, questions.questionTwo.question, questions.questionThree.question, questions.questionFour.question, questions.questionFive.question, questions.questionSix.question, questions.questionSeven.question, questions.questionEight.question, questions.questionNine.question, questions.questionTen.question];
-// console.log(aArray)
-//     $(".form-check-label").append(questions.questionOne.choiceA)
-//     $(".form-check-label2").append(questions.questionOne.choiceB)
-//     $(".form-check-label3").append(questions.questionOne.choiceC)
-//     $(".form-check-label4").append(questions.questionOne.correct)
-
 function startQuiz(){
     
     const output = [];
@@ -57,19 +51,26 @@ questions.forEach((ask, number) => {
         <div class="answers"> ${answers.join("")} </div>`
       );
     });
-        // let a = (`<legend>${ask}</legend>`); 
-        // $(a).addClass("row-form-legend");
-        // // $(a).attr("data-name", );
-        // $(".list").append(a)  
-
+      
 quizContainer.innerHTML = output.join("");
 };
-// aArray.forEach(function(i){
-// $("legend").append(`<label class="form-check-label2">
-// <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">${i}`);
+function checkScore(){
 
-// })
+questions.forEach((ask, number) => {
 
+const answerChoices = quizContainer.querySelectorAll(".answers");
+
+const  userAnswer = (answerChoices.querySelector(`input[name=question${number}]:checked`) || {}).value;
+console.log(userAnswer);
+
+
+if (userAnswer === questions.correct){
+    rightAnswer ++;
+}
+
+});
+
+}
 const questions = [{
     question : "What do the “eyes of Dr. T.J. Eckleburg “represent in The Great Gatsby?",
     answers : {
