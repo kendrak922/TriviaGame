@@ -1,7 +1,37 @@
+
+ 
 body{
-    background-image: url('.assets/images/background.jpeg') blue;
+    height: 100%;
+    background-color: #99d066;
 }
 h1{
-    color: red; 
+    color: black;
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 150px;
     font-family: 'Quattrocento', serif;
+    text-align: center;
+   
+}
+.list{
+height: 100%;
+width: 700px;
+float: center;
+
+}
+header{
+    background-image: url("../images/background.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top:0px;
+    left:0px;
+    border-radius: 10px;
+    font-weight: bold;
+    padding:20px;
+}
+header p{
+    color: black;
+    font-size: 50px;
+    background: rgba(255, 255, 255, 0.75);
 }
