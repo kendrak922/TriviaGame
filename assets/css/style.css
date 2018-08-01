@@ -30,8 +30,24 @@ header{
     font-weight: bold;
     padding:20px;
 }
-header p{
-    color: black;
-    font-size: 50px;
-    background: rgba(255, 255, 255, 0.75);
+
+.section{
+    background: white;
+    margin: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+    opacity: .7;
+}
+.question{
+    font-weight: bolder;
+}
+.intro{
+    text-align: center;
+    font-size: 30px;
+    margin: 40px;
+}
+input:checked{
+    color:pink;
 }

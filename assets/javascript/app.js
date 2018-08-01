@@ -39,7 +39,7 @@ questions.forEach((ask, number) => {
 
   let  letter;
     for (letter in ask.answers) { 
-        answers.push( `<label> <input type="radio" name="question${number}" value="${letter}">
+        answers.push( `<label><input type="radio" name="question${number}" value="${letter}">
             ${letter} :
             ${ask.answers[letter]}
           </label>`
@@ -47,8 +47,8 @@ questions.forEach((ask, number) => {
     }
 
     output.push(
-        `<div class="question"> ${ask.question} </div>
-        <div class="answers"> ${answers.join("")} </div>`
+        `<div class="section"><div class="question"> ${ask.question} </div>
+        <div class="answers"> ${answers.join("")} </div></div>`
       );
     });
       
@@ -72,17 +72,17 @@ if (userAnswer === questions.correct){
 
 }
 const questions = [{
-    question : "What do the “eyes of Dr. T.J. Eckleburg “represent in The Great Gatsby?",
+    question : "What do the eyes of Dr. T.J. Eckleburg represent in The Great Gatsby?",
     answers : {
     a :"The Male Gaze",
     b : "The Green Light",
-    c : "The Eyes of God",
+    c : "The Eye's of God",
     d : "Gatsby's subconscious"
 },
 correct : "c"
 },
 {
-question : "what does miss Havisham wear in Great Expectations?",
+question : "What does Miss Havisham wear in Great Expectations?",
 answers: { 
 a : "her old school uniform",
 b : "potato sack",
@@ -126,7 +126,7 @@ question : "What excites Lennie most about his dream life with George?",
 answers : {
 a : "He wants to get back to his roots",
 b : "George promises to introduce him to some hot chicks",
-c : "He will be rich from panninf for gold",
+c : "He will be rich from panning for gold",
 d : "He will get to tend rabbits"
 },
 correct: "d",
