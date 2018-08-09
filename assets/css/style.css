@@ -42,12 +42,41 @@ header{
 }
 .question{
     font-weight: bolder;
+    margin-bottom: 10px;
 }
+
 .intro{
     text-align: center;
-    font-size: 30px;
+    font-size: 70px;
     margin: 40px;
+    animation-name: enlarge;
+    animation-duration: 10s;
+    color: whitesmoke;
+    background-color: pink;
+    border: 5px ridge pink;
+}
+.introbox{
+    margin-top: 100px;
+    background-color: orangered; 
+    height: 300px;
+    width: 100%;
+    margin-bottom: -250px;
+    border: 5px outset orangered;
 }
 input:checked{
     color:pink;
 }
+
+.time{
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    font-size:40px;
+}
+
+/* keyframes */
+
+/* @keyframes enlarge {
+from{font-size: 1px;
+    opacity: 1.0;}
+to{font-size: 70px;}
+} */

@@ -18,7 +18,7 @@ function clock(){
     }
 function count() {
     time--;  
-    $(".time").html(`Time Remaining:${time}`);
+    $(".time").html(`${time}`);
     if(time === 0){
     clearInterval(timer);
      }};
