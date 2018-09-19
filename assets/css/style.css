@@ -3,9 +3,9 @@
 body{
     height: 100%;
     background-color: #99d066;
+    color:#4C5C68;
 }
 h1{
-    color: black;
     background: rgba(255, 255, 255, 0.75);
     font-size: 150px;
     font-family: 'Quattrocento', serif;
@@ -39,6 +39,7 @@ header{
     text-align: center;
     font-size: 25px;
     opacity: .7;
+    box-shadow: 5px 10px 20px gray;
 }
 .question{
     font-weight: bolder;
@@ -51,18 +52,16 @@ header{
     margin: 40px;
     animation-name: enlarge;
     animation-duration: 10s;
-    color: whitesmoke;
-    background-color: pink;
-    border: 5px ridge pink;
+    background-color: #EFC7C2;
+    box-shadow: 5px 10px 20px gray;
 }
-.introbox{
+/* .introbox{
     margin-top: 100px;
-    background-color: orangered; 
+    background-color: darkgreen; 
     height: 300px;
-    width: 100%;
+    width: 60%;
     margin-bottom: -250px;
-    border: 5px outset orangered;
-}
+} */
 input:checked{
     color:pink;
 }
